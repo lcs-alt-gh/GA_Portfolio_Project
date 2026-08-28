@@ -56,7 +56,27 @@ as the most likely cause rather than a general browsing problem.
 - **Total Sessions (74,368)** in the dashboard's KPI tile is a sum of daily distinct
   session counts; the device breakdown (74,263) uses a single distinct count across the
   full period. The ~0.1% difference reflects a small number of session IDs that recur
-  across multiple days in this sample dataset. 
+  across multiple days in this sample dataset.
+
+## Limitations
+
+- **Device-level, not person-level:** This dataset identifies visitors using `fullVisitorId`,
+  a device/browser-scoped identifier — not a persistent identity. If the same person visits
+  on their phone and later returns on their laptop, these appear as two unrelated visitors
+  with no way to link them. `fullVisitorId` also resets if a user clears cookies. As a result,
+  this analysis cannot measure cross-device behavior (e.g., users who browse on mobile and
+  purchase on desktop), and the device-level conversion gap reported here may be partly
+  inflated by real purchase journeys that started on mobile but converted on desktop under a
+  different session ID. A production GA4 implementation with Google Signals or authenticated
+  User-ID tracking would be needed to analyze this properly.
+- **Correlational, not causal:** The funnel and hypothesis tests establish that the device
+  gap is statistically significant, not why it exists. The checkout-friction explanation is
+  the most likely read of the funnel shape, but confirming it would require further research. 
+- **Single-month window:** Restricting to July 2017 controls for seasonality but means the
+  findings reflect one month of behavior and haven't been validated against other periods.
+- **Conversion only, no cost data:** The channel finding (paid vs. unpaid, CPC vs. organic)
+  compares conversion rates only. Without acquisition cost per channel, this can't be used
+  directly to justify reallocating budget.
 
 ## Key Findings
 
