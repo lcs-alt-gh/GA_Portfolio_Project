@@ -84,7 +84,7 @@ as the most likely cause rather than a general browsing problem.
 - **Device:** Desktop significantly outperforms mobile and tablet on both conversion rate
   and average order value.
 - **Funnel:** The desktop vs. mobile gap widens at every stage of the purchase funnel,
-  peaking at Checkout → Purchase (1.72x). This is the strongest evidence pointing
+  peaking at Checkout → Purchase: 53.1% of desktop users completed their purchase vs. only 30.8% of mobile. This is the strongest evidence pointing
   toward checkout/payment friction on mobile.
 - **Channel:** Paid traffic converts at a significantly higher rate than unpaid overall
   (2.36% vs. 1.44%), and CPC specifically outperforms organic by an even wider margin (2.24%
