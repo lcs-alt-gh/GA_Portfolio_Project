@@ -15,7 +15,7 @@ purchase funnel out by device shows the conversion gap **widens at every
 stage**, peaking at the final Checkout → Purchase step, pointing to checkout/payment friction
 as the most likely cause rather than a general browsing problem.
 
-**Recommendation:** Prioritize an audit of the  mobile checkout process.
+**Recommendation:** Prioritize an audit of the  mobile checkout process to better understand why customers are lost here. 
 
 ---
 
@@ -70,8 +70,9 @@ as the most likely cause rather than a general browsing problem.
   different session ID. A production GA4 implementation with Google Signals or authenticated
   User-ID tracking would be needed to analyze this properly.
 - **Correlational, not causal:** The funnel and hypothesis tests establish that the device
-  gap is statistically significant, not why it exists. The checkout-friction explanation is
-  the most likely read of the funnel shape, but confirming it would require further research. 
+  gap is statistically significant but it does not explain why it exists. Friction in the mobile checkout process
+  (likely due to screen size) is a very likely and logical read of the funnel shape, but confirming it would require
+  further research as suggested. 
 - **Single-month window:** Restricting to July 2017 controls for seasonality but means the
   findings reflect one month of behavior and haven't been validated against other periods.
 - **Conversion only, no cost data:** The channel finding (paid vs. unpaid, CPC vs. organic)
