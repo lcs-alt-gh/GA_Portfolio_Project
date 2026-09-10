@@ -7,19 +7,24 @@ Merchandise Store), built as an MSBA portfolio project.
 
 ---
 
-## The Finding
+## Key Findings
 
-Desktop sessions convert at **~5x** the rate of mobile or tablet (2.05% vs. 0.39%/0.41%) and among sessions that *do* convert, desktop buyers also spend
-significantly more per order ($130.29 vs. $67.25 mobile, $38.01 tablet). Breaking the
-purchase funnel out by device shows the conversion gap **widens at every
-stage**, peaking at the final Checkout → Purchase step, pointing to checkout/payment friction
-as the most likely cause rather than a general browsing problem.
+| Segment | Result |
+|---|---|
+| Paid vs. unpaid traffic | Paid converts 1.6x higher (2.36% vs. 1.44%|
+| CPC vs. organic (top channels) | CPC converts ~2.8x higher than organic (2.24% vs. 0.82%) |
+| Desktop vs. mobile/tablet | Desktop converts ~5x higher than either (2.05% vs. 0.39%/0.41%|
+| Avg. order value | Desktop ($130) significantly exceeds mobile ($67) and tablet ($38); mobile vs. tablet difference not statistically confirmed (overlapping CIs) |
 
-**Recommendation:** Prioritize an audit of the  mobile checkout process to better understand why customers are lost here. 
+**Channel:** Paid traffic significantly outperforms unpaid overall. Within unpaid, the aggregate rate is being propped up by direct/referral traffic rather than organic search specifically. A full spend recommendation would need acquisition cost data, which isn't included in this dataset.
 
----
+**Device:** The real divide is desktop versus portable devices — mobile and tablet convert at similar rates (0.39% vs. 0.41%) and their average order values, while numerically different, aren't statistically distinguishable given overlapping confidence intervals. The funnel breakdown shows the gap between desktop and mobile widens at every stage, peaking at Checkout→Purchase (53.1% vs. 30.8%). Interestingly, tablet outperforms mobile at that same final step (36.1% vs. 30.8%), even though tablet dips earlier at Cart→Checkout, suggesting mobile's friction is more evenly spread across the whole purchase process, while tablet's weak point is more localized (though it should be noted that tablet's sample size is much smaller, with 13 total conversions vs. mobile's 94, means that pattern should be treated cautiously).
+
+**Recommendation:** Prioritize an audit of the mobile checkout process, since the largest gap is between desktop and mobile. This should be a full review of the mobile purchase-experience, since mobile's friction shows up consistently at every stage rather than being isolated to checkout. Tablet's smaller, noisier sample means the dip at cart to checkout stage is worth monitoring but not yet acting on. For channel strategy, acquisition cost data is needed before making changes to the budget. 
 
 ## Live Dashboard
+
+The dashboard focuses on the device story - looking at conversion rates and the purchase funnel breakdown while additional findings on channel performance were included in the SQL queries and python notebook. 
 
 **[View the interactive Tableau Public dashboard →](https://public.tableau.com/views/GoogleAnalyticsDashboard_17871650518290/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
@@ -78,21 +83,6 @@ as the most likely cause rather than a general browsing problem.
 - **Conversion only, no cost data:** The channel finding (paid vs. unpaid, CPC vs. organic)
   compares conversion rates only. Without acquisition cost per channel, this can't be used
   directly to justify reallocating budget.
-
-## Key Findings
-
-- **Device:** Desktop significantly outperforms mobile and tablet on both conversion rate
-  and average order value.
-- **Funnel:** The desktop vs. mobile gap widens at every stage of the purchase funnel,
-  peaking at Checkout → Purchase: 53.1% of desktop users completed their purchase vs. only 30.8% of mobile. This is the strongest evidence pointing
-  toward checkout/payment friction on mobile.
-- **Channel:** Paid traffic converts at a significantly higher rate than unpaid overall
-  (2.36% vs. 1.44%), and CPC specifically outperforms organic by an even wider margin (2.24%
-  vs. 0.81%). This suggests that the aggregate unpaid segment rate is propped up by direct/referral
-  traffic rather than organic search. This measures conversion only, not ROI, so additional acquisition
-  cost data would be needed before making a budget decision.
-
-
 
 
 
